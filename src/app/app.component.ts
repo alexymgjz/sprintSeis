@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {HttpClient} from "@angular/common/http";
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'sprintSeis';
+
+  frases: any;
+  constructor(private http: HttpClient) { }
+
+  ngOnInit() {
+    this.http.get("assets/frases.json")
+      .subscribe(
+        result => {
+          this.frases = result;
+        },
+        error => {
+          console.log('problemas');
+        }
+      );
+  }
+
 }
