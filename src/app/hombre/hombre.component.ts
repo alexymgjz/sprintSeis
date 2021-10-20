@@ -10,12 +10,12 @@ export class HombreComponent implements OnInit {
   @Input() decoradorFrasesHombre: any;
 
   constructor() {
-    console.log("Componente Hombre2222: ", this.decoradorFrasesHombre);
+
   }
 
 
   ngOnInit() {
-    console.log("Componente Hombre: ", this.decoradorFrasesHombre);
+
   }
 
 }
