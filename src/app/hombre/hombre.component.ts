@@ -8,7 +8,8 @@ import {Component, Input, OnInit,} from '@angular/core';
 
 export class HombreComponent implements OnInit {
   @Input() decoradorFrasesHombre: any;
-
+  mostrarHistoria :boolean=false;
+  ocultame: boolean=true;
   constructor() {
 
   }
@@ -17,5 +18,9 @@ export class HombreComponent implements OnInit {
   ngOnInit() {
 
   }
-
+  empesar(){
+    this.mostrarHistoria=true;
+    this.ocultame=false;
+  }
 }
+

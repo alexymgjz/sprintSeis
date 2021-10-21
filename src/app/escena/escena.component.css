@@ -1,0 +1,15 @@
+.activeStep{
+  background-color: #ffc0cb;
+}
+.inactiveStep{
+  background-color: rgba(204, 193, 193, 0.76);
+}
+
+.escena{
+  width: 100vw;
+  height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size:cover ;
+}
+

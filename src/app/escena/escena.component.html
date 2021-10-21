@@ -1,33 +1,10 @@
-<!--<div class="container-fluid">-->
-<!--  <button (click)="disminuir()">anterior</button>-->
-<!--  <button (click)="aumentar()">siguiente</button>-->
-<!--  <br>-->
-
-<!--</div>-->
-
-<!--<div class="container-fluid text-center my-3" *ngFor="let frase of decoradorFrasesEscena; index as i ; ">-->
-<!--    <p  role="button"   class="user-select-none border border-dark rounded-pill py-2"  [ngClass]="{'bg-danger': step === valor  }" >{{frase}}</p>-->
-<!--</div>-->
-<!--<p>{{step}}</p>-->
-<!--<p>{{valor1}}</p>-->
-<!--<p>{{valor}}</p>-->
-
-<!--<div *ngFor="let item of decoradorFrasesEscena; trackBy: trackByItems">-->
-<!-- <p>({{item.id}}) {{item}}</p>-->
-<!--</div>-->
-
-
-
-<div class="container-fluid">
-  <button (click)="disminuir()">anterior</button>
-  <button (click)="aumentar()">siguiente</button>
-<div class="container-fluid text-center my-3" *ngFor="let frase of decoradorFrasesEscena; index as i ; ">
-  <p  role="button" class="user-select-none border border-dark rounded-pill py-2" [ngClass]="step === i ? 'bg-danger' : ''" >{{frase}}</p>
-  <p>
-    i: {{i}}
-  </p>
-</div>
-  <p>
-    Step: {{step}}
-  </p>
+<div class="escena p-3"  style="background-image: url(../../assets/img/{{step+1}}.jpg)">
+  <div class="container-fluid d-flex gap-2" >
+    <button class="w-50 p-2 fs-7 " (click)="disminuir()">Anterior</button>
+    <button class="w-50 p-2 fs-7 " (click)="aumentar()">Siguiente</button>
+  </div>
+  <div class="container-fluid text-center my-3" *ngFor="let frase of decoradorFrasesEscena; index as i ; " >
+    <p  role="button" class="user-select-none border border-dark rounded-pill p-2 fs-7 " [ngClass]="step === i ? 'activeStep' : 'inactiveStep'" >{{frase.texto}}</p>
+  </div>
+  {{step}}
 </div>

@@ -1,1 +1,9 @@
-<app-escena [decoradorFrasesEscena]="decoradorFrasesHombre"></app-escena>
+<div class="container-fluid d-flex flex-column align-items-center altura-100 ">
+  <div class="" *ngIf="mostrarHistoria">
+    <app-escena [decoradorFrasesEscena]="decoradorFrasesHombre" *ngIf="mostrarHistoria" ></app-escena>
+  </div>
+
+  <button class="p-2 w-50 rounded-pill my-5 fs-7" (click)="empesar()" *ngIf="ocultame">Comenzar historia</button>
+</div>
+
+
