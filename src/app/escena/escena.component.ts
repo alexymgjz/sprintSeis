@@ -13,7 +13,7 @@ export class EscenaComponent implements OnInit {
 
   @Input() decoradorFrasesEscena: any;
   step: number = 0;
-  img:string= '../../assets/img/'+0+'.jpg';
+  img:string= 0+'.jpg';
   constructor() { }
 
   ngOnInit(): void {
