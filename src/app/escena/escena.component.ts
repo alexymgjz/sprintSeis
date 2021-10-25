@@ -1,3 +1,5 @@
+
+
 import {Component, Input, OnInit} from '@angular/core';
 
 
@@ -11,28 +13,23 @@ export class EscenaComponent implements OnInit {
 
   @Input() decoradorFrasesEscena: any;
   step: number = 0;
-  valor1: number = 0 ;
+
   constructor() { }
 
   ngOnInit(): void {
-
   }
 
+
   disminuir() {
-     if (this.step>0){
-       this.step--
-     }else {
-       this.step=0;
-     }
+   if (this.step > 0){
+     this.step--
+   }
   }
 
   aumentar() {
-   if (this.step <= this.valor1 && this.step < this.decoradorFrasesEscena.length-1 ){
-       this.step++
-     }
-      this.valor1=this.decoradorFrasesEscena.length-1
-
+    if (this.step < this.decoradorFrasesEscena.length -1){
+      this.step++
+    }
   }
-
 
 }

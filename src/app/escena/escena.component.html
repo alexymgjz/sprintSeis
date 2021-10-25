@@ -1,10 +1,9 @@
-<div class="escena p-3"  style="background-image: url(../../assets/img/{{step+1}}.jpg)">
-  <div class="container-fluid d-flex gap-2" >
+<div class="escena p-3" [ngStyle]="{ 'background-image': 'url(../../assets/img/' + decoradorFrasesEscena[step].img + ')'}">
+  <div class="container-fluid d-flex gap-2">
     <button class="w-50 p-2 fs-7 " (click)="disminuir()">Anterior</button>
     <button class="w-50 p-2 fs-7 " (click)="aumentar()">Siguiente</button>
   </div>
   <div class="container-fluid text-center my-3" *ngFor="let frase of decoradorFrasesEscena; index as i ; " >
     <p  role="button" class="user-select-none border border-dark rounded-pill p-2 fs-7 " [ngClass]="step === i ? 'activeStep' : 'inactiveStep'" >{{frase.texto}}</p>
   </div>
-  {{step}}
 </div>
